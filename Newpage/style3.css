@@ -1,0 +1,103 @@
+/* Body and Container Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundAnimation 10s infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(to right, #67595b, #282726); }
+    50% { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+    100% { background: linear-gradient(to right, #ffafbd, #ffc3a0); }
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    animation: formFadeIn 1s ease-in-out;
+}
+
+@keyframes formFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Styles */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a52e1;
+}
+
+/* Animation */
+@keyframes buttonHover {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+button:hover {
+    animation: buttonHover 0.5s ease-in-out;
+}
